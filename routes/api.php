@@ -21,6 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/all', 'CovidController@all');
 Route::get('/history/all', 'CovidController@historyAll');
 Route::get('/{country}', 'CovidController@country');
-Route::get('/{country}', 'CovidController@country');
 Route::get('/history/{country}', 'CovidController@historyCountry');
 Route::get('/history/{country}/trend', 'CovidController@trendCountry');
