@@ -33,7 +33,7 @@ class CovidController extends Controller
         $casesStats = $this->getStats('cases', $countryStats);
         $recoveredStats = $this->getStats('recovered', $countryStats);
         $allStats = json_encode(['deaths' => $deathStats, 'cases' => $casesStats, 'recovered' => $recoveredStats]);
-        dd($allStats);
+        return $allStats;
     }
     private function getStats($statName, $countryStats){
         $lastStatCount = end($countryStats[$statName]);
